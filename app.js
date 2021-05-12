@@ -1,25 +1,23 @@
 const express = require('express');
-const app = express();
-const studentRoutes = require('./routes/studentRoutes');
-
-// PORT
+const connectDB = require("./db");
+const internRoutes = require('./routes/internRoutes');
 require('dotenv').config();
-const port = process.env.PORT || PORT;
+const { PORT } = process.env;
 
-// Setup database
-const db = require('./database/setup');
-db();
 
-// middleware
+connectDB();
+
+const app = express();
+
 app.use(express.json());
 
-// routes
-app.use(studentRoutes);
+app.use(internRoutes);
 app.get('/', (req, res) => {
     res.status(200).json({ message: 'Welcome!' });
 });
 
-// listening to port
+const port = process.env.PORT || PORT;
+
 app.listen(port, () => {
     console.log(`app running on port ${port}`);
 });
