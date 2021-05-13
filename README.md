@@ -7,7 +7,7 @@ https://tito-simple-crud-app.herokuapp.com
 ## Routes
 Data stored on the database follow the 'intern' model and records can be obtained from routes under '/interns'.
 
-POST '/create':
+## POST '/create':
 creates a new user record. Takes the following parameters:
 
 {
@@ -17,15 +17,15 @@ creates a new user record. Takes the following parameters:
 }
 Example: https://gopeeey-simple-crud.herokuapp.com/users/create
 
-GET '/':
+## GET '/':
 Fetches all user records in the database
 Example: https://gopeeey-simple-crud.herokuapp.com/users
 
-GET '/:id':
+## GET '/:id':
 Fetches a single user whose id is appended to the url
 Example: https://gopeeey-simple-crud.herokuapp.com/users/609496d99627180004b1a66b
 
-PUT '/:id':
+## PUT '/:id':
 Updates the record of a single user whose id is appended to the url.
 Takes any one of the following parameters
 
@@ -36,6 +36,6 @@ Takes any one of the following parameters
 }
 Example: https://gopeeey-simple-crud.herokuapp.com/users/609496d99627180004b1a66b
 
-DELETE '/:id':
+## DELETE '/:id':
 Deletes the record of a single user whose id is appended to the url
 Example: https://gopeeey-simple-crud.herokuapp.com/users/609496d99627180004b1a66b
