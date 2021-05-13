@@ -8,9 +8,12 @@ https://tito-simple-crud.herokuapp.com
 #### USAGE
 1. Clone this repository.
 2. cd into project root directory
-3. Run npm install to install all dependencies(you must have node installed).
-4. Run npm app.js to start the server and connect the database.
+3. Run "npm install" to install all dependencies(you must have node installed).
+4. Run "npm app.js" to start the server and connect the database.
 5. Open up Postman and then test out the Endpoints.
+
+###### nb
+The "run" commands aforementioned are to be done without the quotes.
 
 ### Routes
 Data stored on the database follow the 'intern' model and records can be obtained from routes under '/interns'.
