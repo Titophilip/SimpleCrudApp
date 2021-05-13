@@ -4,8 +4,7 @@
   "description": "A simple CRUD App that can connect to a database and also read, write, update and delete from it",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
