@@ -1,11 +1,12 @@
-const express = require('express');
-const internRouter = express.Router();
 const internControllers = require('../controllers/internControllers');
 
-internRouter.get('/', internControllers.fetchInterns);
-internRouter.get('/:id', internControllers.fetchInternById);
-internRouter.put('/:id', internControllers.updateIntern);
-internRouter.delete('/:id', internControllers.deleteIntern);
-internRouter.post('/create', internControllers.createIntern);
+const {Router} = require('express');
+const internRouter = Router();
+
+internRouter.get('/', () => {internControllers.fetchInterns});
+internRouter.get('/:id', () => {internControllers.fetchInternById});
+internRouter.post('/create', () => {internControllers.createNewIntern});
+internRouter.put('/:id', () => {internControllers.updateIntern});
+internRouter.delete('/:id', () => {internControllers.deleteIntern});
 
 module.exports = internRouter;

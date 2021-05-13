@@ -1,4 +1,4 @@
-const Intern = require("../models/internModel");
+const Intern = require("../models/intern.js");
 
 exports.createNewIntern = (req, res) => {
     Intern.create({
