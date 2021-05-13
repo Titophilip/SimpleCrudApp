@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(internRoutes);
 app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Welcome!' });
+    res.status(200).json({ message: 'Welcome to Zuri Training!' });
 });
 
 const port = process.env.PORT || PORT;

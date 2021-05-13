@@ -5,11 +5,12 @@ exports.createNewIntern = (req, res) => {
         name: req.body.name,
         email: req.body.email,
         country: req.body.country
-    }, (error, newStudent) => {
+    }, (error, newIntern) => {
         if (error) {
             return res.status(500).json({ message: error });
+        } else {
+            return res.status(200).json({ message: "New intern created.", newIntern});
         }
-        return res.status(200).json({ message: "New intern created.", newIntern});
     });
 };
 
@@ -17,8 +18,9 @@ exports.fetchInterns = (req, res) => {
     Intern.find({}, (error, interns) => {
         if (error) {
             return res.status(500).json({ message: error });
+        } else {
+            return res.status(200).json({ message: interns });
         }
-        return res.status(200).json({ message: interns });
     });
 };
 
@@ -28,8 +30,9 @@ exports.fetchIntern = (req, res) => {
             return res.status(500).json({ message: error });
         } else if (!intern) {
             return res.status(404).json({ message: "Intern not found." });
-        } 
-        return res.status(200).json({ intern });
+        } else {
+            return res.status(200).json({ intern });
+        }
     });
 };
 
@@ -41,14 +44,15 @@ exports.updateIntern = (req, res) => {
             return res.status(500).json({ message: error });
         } else if (!intern) {
             return res.status(404).json({ message: "Intern not found. "});
-        }
-        student.save((error, updatedIntern) => {
+        } else {    
+            student.save((error, updatedIntern) => {
                 if (erorr) {
                     return res.status(500).json({ message: error });
                 } else {
                     return res.status(200).json({ message: "Intern details updated successfully." });
                 }
             });
+        }
     });
 };
 
@@ -56,9 +60,10 @@ exports.deleteIntern = (req, res) => {
     Intern.findByIdAndDelete(req.params.id, (error, Intern) => {
         if (error) {
             return res.status(500).json({ message: error });
-        } else if (!intern) {
+        } else if (!Intern) {
             return res.status(404).json({ message: "Intern not found." });
+        } else {
+            return res.status(200).json({ message: "Intern deleted successfully." });
         }
-        return res.status(200).json({ message: "Intern deleted successfully." });
     });
 };
