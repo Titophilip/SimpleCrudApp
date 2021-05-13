@@ -15,15 +15,15 @@ creates a new user record. Takes the following parameters:
     email: Sting,
     country: String
 }
-Example: https://gopeeey-simple-crud.herokuapp.com/users/create
+Example: https://tito-simple-crud-app.herokuapp.com/interns/create
 
 ## GET '/':
 Fetches all user records in the database
-Example: https://gopeeey-simple-crud.herokuapp.com/users
+Example: https://tito-simple-crud-app.herokuapp.com/interns
 
 ## GET '/:id':
 Fetches a single user whose id is appended to the url
-Example: https://gopeeey-simple-crud.herokuapp.com/users/609496d99627180004b1a66b
+Example: https://tito-simple-crud-app.herokuapp.com/interns/609496d99627180004b1a66b
 
 ## PUT '/:id':
 Updates the record of a single user whose id is appended to the url.
@@ -34,8 +34,8 @@ Takes any one of the following parameters
     email: Sting,
     country: String
 }
-Example: https://gopeeey-simple-crud.herokuapp.com/users/609496d99627180004b1a66b
+Example: https://tito-simple-crud-app.herokuapp.com/interns/609496d99627180004b1a66b
 
 ## DELETE '/:id':
 Deletes the record of a single user whose id is appended to the url
-Example: https://gopeeey-simple-crud.herokuapp.com/users/609496d99627180004b1a66b
+Example: https://tito-simple-crud-app.herokuapp.com/interns/609496d99627180004b1a66b

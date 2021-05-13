@@ -39,13 +39,13 @@ exports.fetchIntern = (req, res) => {
 exports.updateIntern = (req, res) => {
     Intern.findByIdAndUpdate(req.params.id, {
         name: req.body.name
-    }, (error, student) => {
+    }, (error, intern) => {
         if (error) {
             return res.status(500).json({ message: error });
         } else if (!intern) {
             return res.status(404).json({ message: "Intern not found. "});
         } else {    
-            student.save((error, updatedIntern) => {
+            intern.save((error, updatedIntern) => {
                 if (erorr) {
                     return res.status(500).json({ message: error });
                 } else {
