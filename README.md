@@ -10,38 +10,37 @@ https://tito-simple-crud.herokuapp.com
 2. cd into project root directory
 3. Run "npm install" to install all dependencies(you must have node installed).
 4. Run "npm app.js" to start the server and connect the database.
-5. Open up Postman and then test out the Endpoints.
-
-###### nb
-The "run" commands aforementioned are to be done without the quotes.
+5. Open up Postman and test out the Endpoints.
 
 ### Routes
 Data stored on the database follow the 'intern' model and records can be obtained from routes under '/interns'.
 
-#### GET '/':
+#### GET  '/interns':
 Fetches all intern records in the database
 
-#### GET '/:id':
-Fetches a single intern whose id is appended to the url
+#### GET  '/interns:id':
+Fetches a single intern whose id is appended to the url.  
+e.g https://tito-simple-crud.herokuapp.com/intenrs/609e7cf29bc17d0004893e05"
 
-#### POST '/create':
-creates a new intern record. Takes the following parameters:
+#### POST  '/interns':
+Creates a new intern record.  
+It takes the following parameters:  
+  
+{  
+    name: String,  
+    email: String,  
+    country: String  
+}  
 
-{
-    name: String,
-    email: Sting,
-    country: String
+#### PUT  '/interns:id':
+Updates the record of a single intern whose id is appended to the url.  
+It takes any of the following parameters and updates it.  
+  
+{  
+    name: String,  
+    email: String,  
+    country: String  
 }
-
-#### PUT '/:id':
-Updates the record of a single intern whose id is appended to the url.
-Takes any one of the following parameters
-
-{
-    name: String,
-    email: Sting,
-    country: String
-}
-#### DELETE '/:id':
+#### DELETE  '/interns:id':
 Deletes the record of a single intern whose id is appended to the url.
 
