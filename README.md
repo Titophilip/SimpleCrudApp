@@ -15,14 +15,14 @@ https://tito-simple-crud.herokuapp.com
 ### Routes
 Data stored on the database follow the 'intern' model and records can be obtained from routes under '/interns'.
 
-#### GET  '/interns':
+#### GET '/interns':
 Fetches all intern records in the database
 
-#### GET  '/interns:id':
+#### GET '/interns/:id':
 Fetches a single intern whose id is appended to the url.  
-e.g https://tito-simple-crud.herokuapp.com/intenrs/609e7cf29bc17d0004893e05"
+e.g https://tito-simple-crud.herokuapp.com/interns/609e7cf29bc17d0004893e05"
 
-#### POST  '/interns':
+#### POST '/interns':
 Creates a new intern record.  
 It takes the following parameters:  
   
@@ -32,7 +32,7 @@ It takes the following parameters:
     country: String  
 }  
 
-#### PUT  '/interns:id':
+#### PUT  '/interns/:id':
 Updates the record of a single intern whose id is appended to the url.  
 It takes any of the following parameters and updates it.  
   
@@ -41,6 +41,6 @@ It takes any of the following parameters and updates it.
     email: String,  
     country: String  
 }
-#### DELETE  '/interns:id':
+#### DELETE  '/interns/:id':
 Deletes the record of a single intern whose id is appended to the url.
 
