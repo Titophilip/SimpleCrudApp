@@ -1,10 +1,10 @@
 ## SimpleCrudApp
 A simple CRUD App connected to a database.  
 It can:
-1. Read from the database using the `GET` method.
-2. Write to the database using the `POST` method.
-3. Update records in the database using the `PUT` method.
-4. Delete records from the database using the `DELETE` method.
+1. Read from the database using the **`GET`** method.
+2. Write to the database using the **`POST`** method.
+3. Update records in the database using the **`PUT`** method.
+4. Delete records from the database using the **`DELETE`** method.
   
 It is hosted on Heroku with the url below:
 
