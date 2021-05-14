@@ -9,7 +9,8 @@ https://tito-simple-crud.herokuapp.com
 Data stored on the database follow the 'intern' model and records can be obtained from routes under '/interns'.
 
 #### GET `'/interns'`
-Fetches all intern records in the database
+Fetches all intern records in the database.  
+Example: https://tito-simple-crud.herokuapp.com/interns
 
 #### GET `'/interns/:id'`
 Fetches a single intern whose id is appended to the url.  
