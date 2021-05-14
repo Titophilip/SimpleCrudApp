@@ -1,9 +1,18 @@
 ## SimpleCrudApp
-A simple CRUD App that can connect to a database and also read, write, update and delete from it.
-It is also hosted on Heroku with the url below:
+A simple CRUD App connected to a database.  
+It can:
+1. Read from the database using the `GET` method.
+2. Write to the database using the `POST` method.
+3. Update records in the database using the `PUT` method.
+4. Delete records from the database using the `DELETE` method.
+  
+It is hosted on Heroku with the url below:
 
 ###### DEMO URL
 https://tito-simple-crud.herokuapp.com
+
+### Environment Variables
+MONGO_URI -- `<Database-URI>`
 
 ### Routes
 Data stored on the database follow the 'intern' model and records can be obtained from routes under '/interns'.
