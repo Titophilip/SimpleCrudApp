@@ -15,7 +15,7 @@ https://tito-simple-crud.herokuapp.com
 MONGO_URI -- `<Database-URI>`
 
 ### Routes
-Data stored on the database follow the 'intern' model and records can be obtained from routes under `'/interns'`.
+Data stored on the database follow the 'intern' model and records can be obtained from routes under **`'/interns'`**.
 
 #### GET `'/interns'`
 Fetches all intern records in the database.  
