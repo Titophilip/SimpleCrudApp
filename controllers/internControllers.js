@@ -19,7 +19,7 @@ exports.fetchInterns = (req, res) => {
         if (error) {
             return res.status(500).json({ message: error });
         } else {
-            return res.status(200).json({ message: interns });
+            return res.status(200).json({ message: "Interns Found.", interns });
         }
     });
 };
