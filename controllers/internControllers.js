@@ -41,15 +41,16 @@ exports.updateIntern = (req, res) => {
         name: req.body.name
     }, (error, intern) => {
         if (error) {
+            console.log(error)
             return res.status(500).json({ message: error });
         } else if (!intern) {
             return res.status(404).json({ message: "Intern not found. "});
         } else {    
-            intern.save((error, updateIntern) => {
+            intern.save((error, updatedIntern) => {
                 if (erorr) {
                     return res.status(500).json({ message: error });
                 } else {
-                    return res.status(200).json({ message: "Intern details updated successfully." });
+                    return res.status(200).json({ message: "Intern details updated successfully.", updatedIntern });
                 }
             });
         }
