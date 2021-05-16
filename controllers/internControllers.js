@@ -46,7 +46,7 @@ exports.updateIntern = (req, res) => {
             return res.status(404).json({ message: "Intern not found. "});
         } else {    
             intern.save((error, updatedIntern) => {
-                if (erorr) {
+                if (error) {
                     return res.status(500).json({ message: error });
                 } else {
                     return res.status(200).json({ message: "Intern details updated successfully.", updatedIntern });
