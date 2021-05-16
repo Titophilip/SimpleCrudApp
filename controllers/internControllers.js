@@ -38,7 +38,9 @@ exports.fetchIntern = (req, res) => {
 
 exports.updateIntern = (req, res) => {
     Intern.findByIdAndUpdate(req.params.id, {
-        name: req.body.name
+        name: req.body.name,
+        email: req.body.email,
+        country: res.body.country
     }, (error, intern) => {
         if (error) {
             return res.status(500).json({ message: error });
