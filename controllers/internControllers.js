@@ -36,29 +36,9 @@ exports.fetchIntern = (req, res) => {
     });
 };
 
-exports.updateInternName = (req, res) => {
+exports.updateIntern = (req, res) => {
     Intern.findByIdAndUpdate(req.params.id, {
         name: req.body.name
-    }, (error, intern) => {
-        if (error) {
-            return res.status(500).json({ message: error });
-        } else if (!intern) {
-            return res.status(404).json({ message: "Intern not found. "});
-        } else {    
-            intern.save((error, updatedIntern) => {
-                if (error) {
-                    return res.status(500).json({ message: error });
-                } else {
-                    return res.status(200).json({ message: "Intern details updated successfully.", updatedIntern });
-                }
-            });
-        }
-    });
-};
-
-exports.updateInternEmail = (req, res) => {
-    Intern.findByIdAndUpdate(req.params.id, {
-        email: req.body.email
     }, (error, intern) => {
         if (error) {
             return res.status(500).json({ message: error });
