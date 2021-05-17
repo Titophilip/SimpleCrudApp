@@ -6,7 +6,8 @@ const internController = require("../controllers/internControllers");
 internRouter.get("/interns", internController.fetchInterns);
 internRouter.get("/interns/:id", internController.fetchIntern);
 internRouter.post("/interns", internController.createNewIntern);
-internRouter.put("/interns/:id", internController.updateIntern);
+internRouter.put("/interns/:id", internController.updateInternName);
+internRouter.put("/interns/:id", internController.updateInternEmail);
 internRouter.delete("/interns/:id", internController.deleteIntern);
 
 module.exports = internRouter;
