@@ -16,8 +16,6 @@ const internSchema = new mongoose.Schema({
     },
 });
 
-mongoose.set('useCreateIndex', true);
-
 const Intern = mongoose.model("intern", internSchema);
 
 module.exports = Intern;
