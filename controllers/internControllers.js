@@ -53,7 +53,7 @@ exports.updateIntern = (req, res) => {
                 if (error) {
                     return res.status(500).json({ message: error });
                 } else {
-                    return res.status(200).json({ message: "Intern details updated successfully.", updatedIntern });
+                    return res.status(200).json({ message: "Intern details updated successfully.", updatedIntern});
                 }
             });
         }
