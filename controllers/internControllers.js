@@ -1,11 +1,8 @@
 const Intern = require("../models/intern.js");
 
 exports.createNewIntern = (req, res) => {
-    Intern.create({
-        name: req.body.name,
-        email: req.body.email,
-        country: req.body.country
-    }, (error, newIntern) => {
+    let intern = req.body
+    Intern.create(intern, (error, newIntern) => {
         if (error) {
             return res.status(500).json({ message: error });
         } else {
