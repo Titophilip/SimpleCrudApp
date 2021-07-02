@@ -1,7 +1,7 @@
 const Intern = require("../models/intern.js");
 
 exports.createNewIntern = (req, res) => {
-    let intern = req.body
+    let intern = req.body;
     Intern.create(intern, (error, newIntern) => {
         if (error) {
             return res.status(500).json({ message: error });
